@@ -24,6 +24,6 @@ def login_signal(sender, request, user, **kwargs):
 # Django signal for updating user activity end time while logout
 @receiver(user_logged_out, sender=User)
 def logout_signal(sender, request, user, **kwargs):
-    user_activity = user.useractivity_set.last()
+    user_activity = UserActivity.objects.filter(user=user).last()
     user_activity.end_time = timezone.now()
     user_activity.save()
