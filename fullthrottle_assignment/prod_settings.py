@@ -2,7 +2,7 @@ from .base_settings import *
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['user-activity-django.herokuapp.com']
 
 DATABASES = {
     'default': {

@@ -1,0 +1,1 @@
+web: gunicorn fullthrottle_assignment.wsgi --log-file -
